@@ -1,10 +1,19 @@
----
-title: Test Jekyll
-timezone: America/Chicago
 collections:
-  posts:
-    title: Posts
+  authors:
     output: true
-  uploads:
-    title: Uploads
-    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
